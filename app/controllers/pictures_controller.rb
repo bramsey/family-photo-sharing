@@ -9,6 +9,15 @@ class PicturesController < ApplicationController
       format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
     end
   end
+  
+  def admin
+    @pictures = Picture.all
+    
+    respond_to do |format|
+      format.html
+      format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
+    end
+  end
 
   # GET /pictures/1
   # GET /pictures/1.json

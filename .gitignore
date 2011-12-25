@@ -2,6 +2,10 @@
 db/*.sqlite3
 log/*.log
 tmp/
-.sass-cache/
-config/initializers/carrierwave.rb
-public/uploads
+*.log
+doc/
+*.swp
+*~
+.DS_Store
+*.ctl.rb
+*.job.rb

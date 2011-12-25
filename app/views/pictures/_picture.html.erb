@@ -1,0 +1,5 @@
+<div class="picture">
+	<%= link_to(picture) do %>
+		<%= image_tag(picture.file_url(:thumb)) if picture.file.present? %>
+	<% end %>
+</div>

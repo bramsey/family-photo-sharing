@@ -19,3 +19,9 @@
 	height:128px;
 	background-image: url(../assets/spinner.gif);
 }
+
+#container {
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
