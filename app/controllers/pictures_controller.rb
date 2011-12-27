@@ -2,8 +2,17 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.all
+    @pictures = Picture.old_pictures
 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
+    end
+  end
+  
+  def today
+    @pictures = Picture.todays_pictures
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
