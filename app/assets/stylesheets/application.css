@@ -20,7 +20,7 @@
 	background-image: url(../assets/spinner.gif);
 }
 
-#container, .picture {
+#container{
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
