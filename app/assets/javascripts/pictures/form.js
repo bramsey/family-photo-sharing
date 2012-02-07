@@ -18,7 +18,7 @@ $(function () {
   
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
-      maxNumberOfFiles: 1,
+      maxNumberOfFiles: 150,
       acceptFileTypes: /\.(jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG)$/
     });
     
