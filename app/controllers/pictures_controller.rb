@@ -2,7 +2,7 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.old_pictures
+    @pictures = Picture.all
 
     respond_to do |format|
       format.html # index.html.erb

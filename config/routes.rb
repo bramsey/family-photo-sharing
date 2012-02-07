@@ -5,7 +5,7 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
       get :today
     end
   end
-  root :to => 'pictures#today'
+  root :to => 'pictures#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
