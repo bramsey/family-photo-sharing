@@ -10,7 +10,18 @@
 //= require jquery.iframe-transport
 //= require jquery.fileupload
 //= require jquery.fileupload-ui
+//= require jquery.masonry.min
 //= require shadowbox
 //= require pictures/customupload
 //= require pictures/form
 //= require_tree .
+
+$(document).ready(function() {
+	var $container = $('#pictures');
+
+	$container.imagesLoaded( function(){
+	  $container.masonry({
+	    itemSelector : '.picture'
+	  });
+	});
+});

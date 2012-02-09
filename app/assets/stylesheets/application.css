@@ -1,13 +1,13 @@
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
+ * the top of the compiled file, but it's generally better to create a new file per style scope. 
  //= require jquery.fileupload-ui
  //= require nifty-layout
  //= require best_in_place
  //= require shadowbox
+ *= require_self
+ *= require_tree .
 */
 
 #loading {
@@ -20,8 +20,34 @@
 	background-image: url(../assets/spinner.gif);
 }
 
-#container{
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
+body{
+	background-color:#ebebeb;
+	font-family:'helvetica neue', Verdana,Helvetica,Arial;
+	font-size:14px;
+	color: #333;
 }
+a img{border:none;}
+a{color:#0000FF;}
+#container{
+	width:940px;
+	margin:auto;
+	//margin-left: 20px;
+	background-color: inherit;
+	padding: 0;
+	border:none;
+	margin-top:20px;
+}
+
+
+h1 {
+	text-align: center; 
+}
+
+#flash_notice,#flash_error,#flash_alert{padding:5px 8px;margin:10px 0;}
+#flash_notice{background-color:#CFC;border:solid 1px #6C6;}
+#flash_error,#flash_alert{background-color:#FCC;border:solid 1px #C66;}
+.fieldWithErrors{display:inline;}
+.error_messages{width:400px;border:2px solid #CF0000;padding:0px;padding-bottom:12px;margin-bottom:20px;background-color:#f0f0f0;font-size:12px;}
+.error_messages h2{text-align:left;font-weight:bold;padding:5px 10px;font-size:12px;margin:0;background-color:#c00;color:#fff;}
+.error_messages p{margin:8px 10px;}
+.error_messages ul{margin:0;}
