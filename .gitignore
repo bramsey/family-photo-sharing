@@ -10,4 +10,5 @@ doc/
 *.ctl.rb
 *.job.rb
 *.jpg
+*.png
 public/uploads/*

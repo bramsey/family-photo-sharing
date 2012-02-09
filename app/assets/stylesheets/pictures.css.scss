@@ -13,14 +13,51 @@ $gutter: 10px;
 	//overflow: hidden;
 	//display: block;
 	@include polaroid;
-	border: 8px solid #fff;
+	background: #ebebeb;
 	
-	width: 192px;
+	width: 208px;
     margin: $gutter;
 	
 }
 
-a > img { margin-bottom: -3px; }
+.main {
+	//margin-bottom: 200px;
+	//padding-bottom: 30px;
+	background: #fff;
+	border: 8px solid #fff;
+}
+
+.ava_mini {
+
+	float: left;
+	margin-right: 8px;
+}
+
+.comment {
+	border-bottom: 1px solid #ccc;
+	padding: 8px 12px 8px 12px;
+	font-size: 12px;
+	min-height: 30px;
+}
+
+.comment p a {
+	color: #555;
+	text-decoration: none;
+	//font-size: 14px;
+	font-weight: bold;
+	&:hover { text-decoration: underline; }
+}
+
+.comment p {
+	margin-top: 0px;
+	color: #666;
+	margin-left: 38px;
+	margin-bottom: 0;
+}
+
+a > img { 
+	//margin-bottom: 20px; 
+}
 
 #pictures {
 	//display: table;
