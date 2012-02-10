@@ -1,15 +1,24 @@
 <div class="picture">
 	<div class="main">
 		<%= link_to(picture) do %>
-			<%= image_tag(picture.file_url) if picture.file.present? %>
+			<%= image_tag(picture.file_url(:thumb)) if picture.file.present? %>
 		<% end %>
 	</div>
 	<div class="comments">
+		<%= render picture.comments %>
 		<div class="comment">
 			<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
 			<p>
-				<a href="#">Billy Ramsey</a>
-				This picture is amazing, I love it!
+				<%= form_for current_user.comments.build(:picture_id => picture.id, :user_id => current_user.id) do |f| %>
+					<div class="clearfix"> 
+				        <div class="input">
+							<%= f.hidden_field :user_id %>
+							<%= f.hidden_field :picture_id %>
+							<%= f.text_area :content, :rows => 1, :placeholder => 'Add a comment' %>
+						</div>
+					</div>
+					<%= f.submit 'Comment', :class => 'btn' %>
+				<% end %>
 			</p>
 		</div>
 	</div>

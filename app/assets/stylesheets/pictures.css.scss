@@ -54,21 +54,8 @@ a > img {
 	padding: 8px 12px 8px 12px;
 	font-size: 12px;
 	min-height: 30px;
-}
-
-.comment p a {
-	color: #555;
-	text-decoration: none;
-	//font-size: 14px;
-	font-weight: bold;
-	&:hover { text-decoration: underline; }
-}
-
-.comment p {
-	margin-top: 0px;
-	color: #666;
-	margin-left: 38px;
-	margin-bottom: 0;
+	display: inline-block;
+	width: $picture-size - 8;
 }
 
 #pictures {

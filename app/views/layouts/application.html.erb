@@ -9,7 +9,8 @@
   </head>
   <body>
     <div id="container">
-      <%= render 'layouts/session' %>
+      <%= render 'layouts/flashes' %>
+	  <%= render 'layouts/session' %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
