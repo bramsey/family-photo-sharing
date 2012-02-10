@@ -12,6 +12,7 @@ gem 'fog'
 gem 'mini_magick'
 gem 'heroku'
 gem 'fog'
+gem 'devise'
 gem "best_in_place", :git => 'git://github.com/proton/best_in_place.git'
 
 group :assets do

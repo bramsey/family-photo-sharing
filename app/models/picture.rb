@@ -5,6 +5,9 @@ class Picture < ActiveRecord::Base
   
   default_scope :order => 'pictures.created_at DESC'
   
+  belongs_to :user
+  has_many :comments, :dependent => :destroy
+  
   #one convenient method to pass jq_upload the necessary information
   def to_jq_upload
   {

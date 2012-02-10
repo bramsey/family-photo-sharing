@@ -1,4 +1,6 @@
 CarrierwaveJqueryFileUpload::Application.routes.draw do
+  devise_for :users
+
   resources :pictures do
     collection do
       get :admin

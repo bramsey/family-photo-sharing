@@ -1,4 +1,7 @@
 class PicturesController < ApplicationController
+  
+  before_filter :authenticate_user!, :only => [:new]
+  
   # GET /pictures
   # GET /pictures.json
   def index

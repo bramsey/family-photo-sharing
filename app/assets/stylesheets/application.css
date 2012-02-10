@@ -43,6 +43,14 @@ a{color:#0000FF;}
 	margin-top:20px;
 }
 
+#header > a {
+	
+	position: absolute;
+	right: 20px;
+}
+
+#header { position: relative; }
+
 
 h1 {
 	text-align: center; 

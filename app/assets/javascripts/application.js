@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery_ujs
 //= require jquery-ui
 //= require best_in_place
 //= require jquery.iframe-transport
