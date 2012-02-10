@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.comment p a {
+.comment p a, .action p a {
 	color: #555;
 	text-decoration: none;
 	//font-size: 14px;
@@ -10,15 +10,16 @@
 	&:hover { text-decoration: underline; }
 }
 
-.comment p {
+.comment p, .action p {
 	margin-top: 0px;
 	color: #666;
 	margin-left: 38px;
 	margin-bottom: 0;
 }
 
+.action p a { line-height: 30px; }
 
-.comment textarea {
+.action input[type=text] {
 	width: 82%;
 	height: 21px;
 	padding: 4px 3px 3px;
@@ -29,6 +30,6 @@
 	resize: none;
 }
 
-.comment .btn {
+.action .btn {
 	float: right;
 }

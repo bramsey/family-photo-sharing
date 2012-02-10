@@ -1,5 +1,5 @@
 <div class="comment" id="comment<%= comment.id %>">
-	<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
+	<a href="#"><%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %></a>
 	<p>
 		<a href="#"><%= comment.user.name || comment.user.email %></a>
 		<%= comment.content %>

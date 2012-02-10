@@ -1,4 +1,4 @@
-<div class="comment">
+<div class="action">
 	<% if user_signed_in? %>
 	
 		<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
@@ -8,7 +8,7 @@
 			        <div class="input">
 						<%= f.hidden_field :user_id %>
 						<%= f.hidden_field :picture_id %>
-						<%= f.text_area :content, :rows => 1, :placeholder => 'Add a comment' %>
+						<%= f.text_field :content, :placeholder => 'Add a comment' %>
 					</div>
 				</div>
 				<%= f.submit 'Comment', :class => 'btn' %>

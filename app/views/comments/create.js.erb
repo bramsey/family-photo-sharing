@@ -5,7 +5,7 @@
 	$("#comment<%= @comment.id %>").hide().slideDown(300);
 	
 	$("#<%= @comment.picture_id %>")
-		.find('textarea').val('')
+		.find('#comment_content').val('')
 	
 	setTimeout(function() {
 		$('#pictures').masonry( 'reload' );
