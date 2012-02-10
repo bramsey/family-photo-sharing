@@ -1,4 +1,4 @@
-<div class="picture">
+<div class="picture" id="<%= picture.id %>">
 	<div class="main">
 		<%= link_to(picture) do %>
 			<%= image_tag(picture.file_url(:thumb)) if picture.file.present? %>
@@ -6,20 +6,6 @@
 	</div>
 	<div class="comments">
 		<%= render picture.comments %>
-		<div class="comment">
-			<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
-			<p>
-				<%= form_for current_user.comments.build(:picture_id => picture.id, :user_id => current_user.id) do |f| %>
-					<div class="clearfix"> 
-				        <div class="input">
-							<%= f.hidden_field :user_id %>
-							<%= f.hidden_field :picture_id %>
-							<%= f.text_area :content, :rows => 1, :placeholder => 'Add a comment' %>
-						</div>
-					</div>
-					<%= f.submit 'Comment', :class => 'btn' %>
-				<% end %>
-			</p>
-		</div>
 	</div>
+	<%= render :partial => 'comments/form', :locals => {:picture => picture} %>
 </div>

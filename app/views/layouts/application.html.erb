@@ -9,7 +9,9 @@
   </head>
   <body>
     <div id="container">
-      <%= render 'layouts/flashes' %>
+	  <div id="flash">
+		<%= render :partial => 'layouts/flashes' %>
+	  </div>
 	  <%= render 'layouts/session' %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>

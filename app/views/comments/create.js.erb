@@ -1,0 +1,26 @@
+<% unless @comment.errors.any? %>
+	$("#<%= @comment.picture_id %>")
+		.find('.comments').append("<%= escape_javascript(render(:partial => 'comments/comment',
+		:locals => { :comment => @comment })) %>")
+	$("#comment<%= @comment.id %>").hide().slideDown(300);
+	
+	$("#<%= @comment.picture_id %>")
+		.find('textarea').val('')
+	
+	setTimeout(function() {
+		$('#pictures').masonry( 'reload' );
+	}, 300);
+	
+	
+	updateFlash();
+<% end %>
+
+function updateFlash() {
+	$('#flash')
+		.html("<%= escape_javascript(render(:partial => "layouts/flashes")) %>")
+		.hide()
+		.fadeIn('medium')
+	setTimeout(function() {
+		$('#flash').fadeOut('medium');
+	}, 2000);
+}

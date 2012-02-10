@@ -1,7 +1,9 @@
 <center>
 <h1>Make Grandpa Smile</h1>
 
-<%= link_to 'Add a Picture', new_picture_path %>
+<% if user_signed_in? %>
+	<%= link_to 'Add a Picture', new_picture_path %>
+<% end %>
 </center>
 <div id="pictures">
 	<%= render @pictures %>

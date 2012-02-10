@@ -1,0 +1,22 @@
+<div class="comment">
+	<% if user_signed_in? %>
+	
+		<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
+		<p>
+			<%= form_for current_user.comments.build(:picture_id => picture.id, :user_id => current_user.id), :remote => true do |f| %>
+				<div class="clearfix"> 
+			        <div class="input">
+						<%= f.hidden_field :user_id %>
+						<%= f.hidden_field :picture_id %>
+						<%= f.text_area :content, :rows => 1, :placeholder => 'Add a comment' %>
+					</div>
+				</div>
+				<%= f.submit 'Comment', :class => 'btn' %>
+			<% end %>
+		</p>
+	<% else %>
+		<p>
+			<%= link_to 'Login to comment', new_user_session_path %>
+		</p>
+	<% end %>
+</div>

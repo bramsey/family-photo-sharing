@@ -1,6 +1,6 @@
 class Comment < ActiveRecord::Base
   
-  belongs_to :pictures
+  belongs_to :picture
   
   belongs_to :user
   

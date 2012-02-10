@@ -1,0 +1,7 @@
+<div class="comment" id="comment<%= comment.id %>">
+	<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
+	<p>
+		<a href="#"><%= comment.user.name || comment.user.email %></a>
+		<%= comment.content %>
+	</p>
+</div>
