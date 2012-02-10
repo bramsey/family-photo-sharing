@@ -29,7 +29,12 @@ body{
 a img{border:none;}
 a{color:#0000FF;}
 #container{
-	width:940px;
+	
+	//width: 1160px;
+	width: 932px;
+	//width: 704px;
+	//width: 476px;
+	//width: 248px;
 	margin:auto;
 	//margin-left: 20px;
 	background-color: inherit;
@@ -51,3 +56,5 @@ h1 {
 .error_messages h2{text-align:left;font-weight:bold;padding:5px 10px;font-size:12px;margin:0;background-color:#c00;color:#fff;}
 .error_messages p{margin:8px 10px;}
 .error_messages ul{margin:0;}
+
+

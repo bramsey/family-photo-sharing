@@ -6,6 +6,12 @@
 
 $gutter: 10px;
 
+//$picture-size: 146px; // 5 columns
+//$picture-size: 192px; // 4 columns
+$picture-size: 268px; // 3 columns
+//$picture-size: 420px; // 2 columns
+//$picture-size: 876px; // 1 column
+
 .picture { 
 	float: left; 
 	//margin-left: 28px;
@@ -15,9 +21,19 @@ $gutter: 10px;
 	@include polaroid;
 	background: #ebebeb;
 	
-	width: 208px;
+	width: $picture-size + 16;
     margin: $gutter;
 	
+}
+
+.big {
+	width: 876px + 16;
+}
+
+.big > .main > img, .big > .main > a > img { width: 876px; }
+
+a > img { 
+	width: $picture-size;
 }
 
 .main {
@@ -55,10 +71,6 @@ $gutter: 10px;
 	margin-bottom: 0;
 }
 
-a > img { 
-	//margin-bottom: 20px; 
-}
-
 #pictures {
 	//display: table;
 	position: relative;
@@ -74,3 +86,5 @@ a > img {
 .fileupload-content {
 	min-height: 100px;
 }
+
+

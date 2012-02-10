@@ -1,10 +1,16 @@
 <div class="picture">
 	<div class="main">
 		<%= link_to(picture) do %>
-			<%= image_tag(picture.file_url(:thumb)) if picture.file.present? %>
+			<%= image_tag(picture.file_url) if picture.file.present? %>
 		<% end %>
 	</div>
 	<div class="comments">
-		
+		<div class="comment">
+			<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
+			<p>
+				<a href="#">Billy Ramsey</a>
+				This picture is amazing, I love it!
+			</p>
+		</div>
 	</div>
 </div>

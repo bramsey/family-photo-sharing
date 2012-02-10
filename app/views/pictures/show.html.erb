@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'Back', :back %>
-
-<p>
-  <%= image_tag(@picture.file) %>
-</p>
+<div class="picture big">
+	<div class="main">
+		<%= image_tag(@picture.file) if @picture.file.present? %>
+	</div>
+	<div class="comments">
+		<div class="comment">
+			<%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %>
+			<p>
+				<a href="#">Billy Ramsey</a>
+				This picture is amazing, I love it!
+			</p>
+		</div>
+	</div>
+</div>
 
 
 
