@@ -1,7 +1,7 @@
 <div class="comment" id="comment<%= comment.id %>">
-	<a href="#"><%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %></a>
+	<%= link_to image_tag( 'billy.png', :class => 'ava_mini', :size => '30x30'), comment.user %>
 	<p>
-		<a href="#"><%= comment.user.name || comment.user.email %></a>
+		<%= link_to (comment.user.name || comment.user.email), comment.user %>
 		<%= comment.content %>
 	</p>
 </div>

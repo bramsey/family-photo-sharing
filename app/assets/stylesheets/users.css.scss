@@ -1,0 +1,44 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin polaroid {
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.4),inset 0 1px 1px #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4),inset 0 1px 1px #fff;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.4),inset 0 1px 1px #fff;
+}
+
+$columns: 5;
+$img-width: 160px;
+$user-width: $img-width;
+
+
+$gutter: ((932 - (($img-width + 16) * $columns)) / ($columns - 1)) ;
+
+
+
+#users {
+	margin-left: -$gutter;
+	margin-top: 1.5em;
+}
+
+.user {
+
+	width: $user-width;
+	display: block;
+	margin-left: $gutter;
+	margin-bottom: $gutter;
+	float: left;
+	background: #fff;
+	@include polaroid;
+	padding: 8px;
+	
+}
+
+.user > a > img {
+	width: $img-width;
+	//border: 8px solid #fff;
+}
+
+.user h3 { margin: 0; margin-top: 1px; }
+
+.user a { text-decoration: none; color: #36c; }

@@ -1,13 +1,13 @@
 <div class="picture" id="<%= picture.id %>">
 	<div class="main">
 		<%= link_to(picture) do %>
-			<%= image_tag(picture.file_url(:thumb)) if picture.file.present? %>
+			<%= image_tag(picture.file) if picture.file.present? %>
 		<% end %>
 	</div>
 	<div class="comment">
-		<a href='#'><%= image_tag 'billy.png', :class => 'ava_mini', :size => '30x30' %></a>
+		<%= link_to image_tag( 'billy.png', :class => 'ava_mini', :size => '30x30'), picture.user %>
 		<p>
-			by <a href="#"><%= picture.user.name || picture.user.email %></a>
+			by <%= link_to (picture.user.name || picture.user.email), picture.user %>
 		</p>
 	</div>
 	<div class="comments">
