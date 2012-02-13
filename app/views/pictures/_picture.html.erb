@@ -5,7 +5,7 @@
 		<% end %>
 	</div>
 	<div class="comment">
-		<%= link_to image_tag( 'billy.png', :class => 'ava_mini', :size => '30x30'), picture.user %>
+		<%= link_to image_tag( picture.user.avatar_thumb_path, :class => 'ava_mini', :size => '30x30'), picture.user %>
 		<p>
 			by <%= link_to (picture.user.name || picture.user.email), picture.user %>
 		</p>

@@ -9,6 +9,4 @@ doc/
 .DS_Store
 *.ctl.rb
 *.job.rb
-*.jpg
-*.png
 public/uploads/*

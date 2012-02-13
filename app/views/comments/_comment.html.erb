@@ -1,5 +1,5 @@
 <div class="comment" id="comment<%= comment.id %>">
-	<%= link_to image_tag( 'billy.png', :class => 'ava_mini', :size => '30x30'), comment.user %>
+	<%= link_to image_tag( comment.user.avatar_thumb_path, :class => 'ava_mini'), comment.user %>
 	<p>
 		<%= link_to (comment.user.name || comment.user.email), comment.user %>
 		<%= comment.content %>

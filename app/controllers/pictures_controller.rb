@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   
-  before_filter :authenticate_user!, :only => [:new]
+  before_filter :authenticate_user!, :only => [:new, :update]
   
   # GET /pictures
   # GET /pictures.json
@@ -61,7 +61,7 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    @picture = Picture.new(params[:picture])
+    @picture = current_user.pictures.build(params[:picture])
 
     respond_to do |format|
       if @picture.save

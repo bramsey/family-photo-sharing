@@ -2,6 +2,8 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
   devise_for :users
   
   resources :users
+  
+  resources :avatars
 
   resources :pictures do
     collection do
