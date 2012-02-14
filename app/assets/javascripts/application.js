@@ -7,6 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require bootstrap
 //= require best_in_place
 //= require jquery.iframe-transport
 //= require jquery.fileupload

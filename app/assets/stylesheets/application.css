@@ -6,6 +6,7 @@
  //= require nifty-layout
  //= require best_in_place
  //= require shadowbox
+//= require bootstrap
  *= require_self
  *= require_tree .
 */
