@@ -25,6 +25,8 @@ body{
 	font-family:'helvetica neue', Verdana,Helvetica,Arial;
 	font-size:14px;
 	color: #333;
+	
+	background: url('paper.png') repeat; 
 }
 a img{border:none;}
 a{color:#0000FF;}

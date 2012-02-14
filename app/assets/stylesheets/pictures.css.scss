@@ -9,7 +9,7 @@ $gutter: 10px;
 //$picture-size: 146px; // 5 columns
 //$picture-size: 192px; // 4 columns
 //$picture-size: 268px; // 3 columns
-$picture-size: 420px; // 2 columns
+$picture-size: 388px; // 2 columns
 //$picture-size: 876px; // 1 column
 
 .picture { 
@@ -21,7 +21,7 @@ $picture-size: 420px; // 2 columns
 	@include polaroid;
 	background: #ebebeb;
 	
-	width: $picture-size + 16;
+	width: $picture-size + 48;
     margin: $gutter;
 	
 }
@@ -40,7 +40,7 @@ $picture-size: 420px; // 2 columns
 	//margin-bottom: 200px;
 	//padding-bottom: 30px;
 	background: #fff;
-	border: 8px solid #fff;
+	padding: 32px 24px 32px 24px;
 }
 
 .ava_mini {
@@ -51,11 +51,11 @@ $picture-size: 420px; // 2 columns
 
 .comment, .action {
 	border-bottom: 1px solid #ccc;
-	padding: 8px 12px 8px 12px;
+	padding: 16px 24px 16px 24px;
 	font-size: 12px;
 	min-height: 30px;
 	display: inline-block;
-	width: $picture-size - 8;
+	width: $picture-size;
 }
 
 #pictures {

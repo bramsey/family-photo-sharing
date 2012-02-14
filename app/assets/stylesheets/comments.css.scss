@@ -10,17 +10,17 @@
 	&:hover { text-decoration: underline; }
 }
 
-.comment p, .action p {
+.comment p, .action p, .action form {
 	margin-top: 0px;
 	color: #666;
-	margin-left: 38px;
+	margin-left: 42px;
 	margin-bottom: 0;
 }
 
 .action p a { line-height: 30px; }
 
 .action input[type=text] {
-	width: 82%;
+	width: 338px;
 	height: 21px;
 	padding: 4px 3px 3px;
 	border: 1px solid #ccc;

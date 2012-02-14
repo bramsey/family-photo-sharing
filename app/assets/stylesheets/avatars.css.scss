@@ -1,3 +1,19 @@
 // Place all the styles related to the Avatars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#avatar_file {
+	height: 200px;
+	width: 200px;
+	border: 0;
+	left: 0;
+}
+
+#file_label {
+	position: absolute;
+	left: 8px;
+	top: 84px;
+	width: 184px;
+	text-align: center;
+	font-size: 1.5em;
+}

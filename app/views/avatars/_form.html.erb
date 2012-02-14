@@ -17,7 +17,11 @@
 				<div class="fileupload-buttonbar" style="padding: 0; position: relative;">
 					<label class="fileinput-button"  rel="popover" data-content="Click the photo to select a new one or drag one onto this page." data-original-title="Update Photo">
 						<%= f.hidden_field :user_id %>
-						<%= f.file_field :file %>
+						<div id="avatar_block" style="position: relative;">
+							<%= image_tag 'default_ava.png', :size => '200x200' %>
+							<%= f.label 'Click to select an avatar.', :id => 'file_label' %>
+							<%= f.file_field :file %>
+						</div>
 						<%= f.submit( 'Submit Avatar' )%>
 					</label>
 				</div>

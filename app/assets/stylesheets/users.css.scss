@@ -21,6 +21,9 @@ $gutter: ((932 - (($img-width + 16) * $columns)) / ($columns - 1)) ;
 	margin-top: 1.5em;
 }
 
+
+$top: ($img-width / 14);
+$side: ($img-width / 18.66667);
 .user {
 
 	width: $user-width;
@@ -30,7 +33,8 @@ $gutter: ((932 - (($img-width + 16) * $columns)) / ($columns - 1)) ;
 	float: left;
 	background: #fff;
 	@include polaroid;
-	padding: 8px;
+	//padding: 8px;
+	padding: $top $side $top $side;
 	
 }
 
@@ -39,6 +43,6 @@ $gutter: ((932 - (($img-width + 16) * $columns)) / ($columns - 1)) ;
 	//border: 8px solid #fff;
 }
 
-.user h3 { margin: 0; margin-top: 1px; }
+.user h3 { margin: 0; margin-top: ($top / 2); }
 
 .user a { text-decoration: none; color: #36c; }
