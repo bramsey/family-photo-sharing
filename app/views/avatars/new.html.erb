@@ -1,0 +1,5 @@
+<%= form_for Avatar.new(:user_id => current_user.id), :html => { :multipart => true } do |f| %>
+	<%= f.hidden_field :user_id %>
+	<%= f.file_field :file %>
+	<%= f.submit( 'Submit Avatar' )%>
+<% end %>

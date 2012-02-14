@@ -4,6 +4,7 @@
 <% end %>
 
 <div id="fileupload">
+  <span id="redirect_path" style="display: none"><%="#{root_path}"%></span>
   <%= form_for @picture, :html => { :multipart => true } do |f| %>
       <br />
       <div class="fileupload-buttonbar">

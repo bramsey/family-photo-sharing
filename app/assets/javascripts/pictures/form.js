@@ -19,6 +19,7 @@ $(function () {
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
       maxNumberOfFiles: 150,
+      autoUpload: true,
       acceptFileTypes: /\.(jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG)$/
     });
     
@@ -45,5 +46,11 @@ $(function () {
       //$('.progress-bar').find('div').css('width',  progress + '%').find('span').html(progress + '%');
       console.info(progress);
     });
+
+	$('#fileupload')
+		.bind('fileuploadstop', function (e, data) {
+				var path = $('#redirect_path').html();
+				window.location.assign(path);	
+		});
 
 });
