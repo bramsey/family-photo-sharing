@@ -26,6 +26,7 @@ body{
 	font-family:'helvetica neue', Verdana,Helvetica,Arial;
 	font-size:14px;
 	color: #333;
+	padding-top: 40px;
 	
 	background: url('paper.png') repeat; 
 }
