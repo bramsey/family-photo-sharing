@@ -26,12 +26,6 @@ $picture-size: 388px; // 2 columns
 	
 }
 
-.big {
-	width: 876px + 16;
-}
-
-.big > .main > img, .big > .main > a > img { width: 876px; }
-
 .main a > img { 
 	width: $picture-size;
 }
@@ -42,6 +36,17 @@ $picture-size: 388px; // 2 columns
 	background: #fff;
 	padding: 32px 24px 32px 24px;
 }
+
+.big {
+	width: 892px;
+	margin: 20px;
+}
+
+.big > .main {
+	padding: 67px 48px 67px 48px;
+}
+
+.big > .main > img, .big > .main > a > img { width: 796px; }
 
 .ava_mini {
 

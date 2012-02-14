@@ -1,7 +1,7 @@
 <div class="picture" id="<%= picture.id %>">
 	<div class="main">
 		<%= link_to(picture) do %>
-			<%= image_tag(picture.file) if picture.file.present? %>
+			<%= image_tag(picture.file_url(:thumb)) if picture.file.present? %>
 		<% end %>
 	</div>
 	<div class="comment">
