@@ -1,3 +1,23 @@
+<% if user_signed_in? && !current_user.avatar %>
+	<div id="content">
+		<div class="hero-unit well">
+			<h1>Welcome!</h1>
+			<p>
+				<ol>
+					<li>
+						Add a profile picture <%= link_to 'here', edit_user_registration_path %>. 
+					</li>
+					<li>
+						<a class="btn btn-primary btn-small" href="<%= new_picture_path %>">
+							<i class="icon-plus icon-white"></i>
+							Add some pictures
+						</a>
+					</li>
+				</ol>
+			</p>
+		</div>
+	</div>
+<% end %>
 <div id="pictures">
 	<%= render @pictures %>
 </div>

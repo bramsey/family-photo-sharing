@@ -4,6 +4,7 @@
 
 
 $(document).ready ->
+	set_active()
 	hide_comments()
 
 
@@ -16,7 +17,17 @@ $('.show_comment').live 'click', () ->
 	setTimeout callback, 300
 	
 	return false
+
+set_active = () ->
+	nav_links = $('#navigation a')
 	
+	current = document.URL.replace(/^.*\/|\.[^.]*$/g, '')
+	
+	for link in nav_links
+		do (link) ->
+			if $(link).attr('href').replace(/^.*\/|\.[^.]*$/g, '') == current
+				$(link).closest('li').addClass('active') 
+				return false
 
 hide_comments = () ->
 	comment_blocks = $('.comments')

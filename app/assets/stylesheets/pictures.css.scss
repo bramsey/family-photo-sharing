@@ -12,6 +12,8 @@ $gutter: 10px;
 $picture-size: 392px; // 2 columns
 //$picture-size: 876px; // 1 column
 
+$big-picture-size: 804px;
+
 .picture { 
 	float: left; 
 	//margin-left: 28px;
@@ -46,7 +48,7 @@ $picture-size: 392px; // 2 columns
 	padding: 67px 48px 67px 48px;
 }
 
-.big > .main > img, .big > .main > a > img { width: 804px; }
+.big > .main > img, .big > .main > a > img { width: $big-picture-size; }
 
 .ava_mini {
 
@@ -63,15 +65,18 @@ $picture-size: 392px; // 2 columns
 	width: $picture-size;
 }
 
+.big .comment, .big .action {
+	padding: 16px 48px 16px 48px;
+	font-size: 16px;
+	min-height: 30px;
+	width: $big-picture-size;
+}
+
+
 #pictures {
-	//display: table;
 	position: relative;
 	margin-bottom: 1.5em;
-	//overflow: visible;
-	//margin-left: -28px;
 	position: relative;
-	margin-top: 1em;
-	//min-height: 700px;
 	padding: $gutter;
 }
 

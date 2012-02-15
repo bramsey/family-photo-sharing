@@ -52,8 +52,8 @@ h1 {
 #flash { 
 	position: fixed; 
 	z-index: 100;
-	margin-left: 20px;
-	font-size: 18px;
+	margin-left: 10px;
+	font-size: 24px;
 }
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
@@ -90,4 +90,19 @@ h1 {
 
 .topbar-add {
 	float: right;
+}
+
+.hero-unit p {
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+.hero-unit ol {
+	width: 200px;
+	margin: auto;
+}
+
+.hero-unit ol li {
+	line-height: 48px;
+	text-align: center;
 }

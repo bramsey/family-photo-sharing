@@ -6,7 +6,7 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   def index
     @pictures = Picture.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }

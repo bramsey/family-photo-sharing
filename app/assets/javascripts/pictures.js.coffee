@@ -1,3 +1,3 @@
 $(document).ready ->
-	callback = -> $('.alert-message').slideUp('medium')
+	callback = -> $('.alert').slideUp('medium')
 	setTimeout callback, 3000
