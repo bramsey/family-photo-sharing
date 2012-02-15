@@ -9,7 +9,7 @@ $gutter: 10px;
 //$picture-size: 146px; // 5 columns
 //$picture-size: 192px; // 4 columns
 //$picture-size: 268px; // 3 columns
-$picture-size: 388px; // 2 columns
+$picture-size: 392px; // 2 columns
 //$picture-size: 876px; // 1 column
 
 .picture { 
@@ -38,7 +38,7 @@ $picture-size: 388px; // 2 columns
 }
 
 .big {
-	width: 892px;
+	width: 900px;
 	margin: 20px;
 }
 
@@ -46,7 +46,7 @@ $picture-size: 388px; // 2 columns
 	padding: 67px 48px 67px 48px;
 }
 
-.big > .main > img, .big > .main > a > img { width: 796px; }
+.big > .main > img, .big > .main > a > img { width: 804px; }
 
 .ava_mini {
 

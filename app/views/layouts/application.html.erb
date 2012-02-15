@@ -8,12 +8,11 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
 	  <div id="flash">
 		<%= render :partial => 'layouts/flashes' %>
 	  </div>
 	  <%= render 'layouts/navbar' %>
-	  <%= render 'layouts/session' %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>

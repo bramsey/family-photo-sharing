@@ -1,0 +1,58 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+	    <div class="container">
+			<ul class="nav">
+			  <li>
+			    <%= link_to 'Home', root_path %>
+			  </li>
+			  <li>
+				<%= link_to 'The Family', users_path %>
+			  </li>
+			  <li>
+				
+			  </li>
+			</ul>
+			<ul class="nav" id="logo">
+				<li>
+					<%= link_to 'Make Grandpa Smile', root_path, :class => 'brand' %>
+				</li>
+			</ul>
+			<div class="pull-right">
+				<% if user_signed_in? %>
+				  <ul class="nav pull-right">
+					<li class="dropdown">
+							<a href="#"
+						          class="dropdown-toggle"
+						          data-toggle="dropdown">
+						          <%= current_user.name || current_user.email %>
+						          <b class="caret"></b>
+						    </a>
+						    <ul class="dropdown-menu">
+						      <li>
+								<%= link_to('Account settings', edit_user_registration_path) %>
+							  </li>
+							  <li class="divider"></li>
+							  <li>
+								<%= link_to('Sign out', destroy_user_session_path, :method => :delete) %>
+							  </li>
+						    </ul>
+					  </li>
+					</ul>
+					<div class="topbar-add">
+						<a class="btn btn-warning btn-small" href="<%= new_picture_path %>">
+							<i class="icon-plus icon-white"></i>
+							Add pictures
+						</a>
+					  </div>
+				  <% else %>
+				  	<ul class="nav">
+						<li>
+						  <%= link_to('Sign in', new_user_session_path) %>
+						</li>
+					</ul>
+				  <% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
