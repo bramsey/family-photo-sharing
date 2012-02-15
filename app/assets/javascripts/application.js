@@ -26,4 +26,11 @@ $(document).ready(function() {
 	    itemSelector : '.picture'
 	  });
 	});
+	
+	$('#users').imagesLoaded( function(){
+	  $('#users').masonry({
+	    itemSelector : '.user'
+	  });
+	});
+	
 });

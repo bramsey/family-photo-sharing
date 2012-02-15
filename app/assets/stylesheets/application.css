@@ -23,26 +23,16 @@
 body{
 	background-color:#ebebeb;
 	color: #333;
-	padding-top: 40px;
+	padding-top: 50px;
 	
 	background: url('paper.png') repeat; 
 }
 a img{border:none;}
 a{color:#0000FF;}
-#container{
-	
-	//width: 1388px;
-	//width: 1160px;
-	//width: 932px;
-	//width: 704px;
-	//width: 476px;
-	//width: 248px;
-	//margin:auto;
-	//margin-left: 20px;
-	background-color: inherit;
-	padding: 0;
-	border:none;
-	//margin-top:20px;
+
+
+#content {
+	padding: 10px;
 }
 
 #header > a {
