@@ -2173,11 +2173,11 @@ button.btn.small, input[type="submit"].btn.small {
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #555555;
+  color: #3366cc;
   text-decoration: none;
 }
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
-  color: #555555;
+  color: #3366cc;
   text-decoration: none;
   background-color: #f89406;
   background-color: rgba(0, 0, 0, 0.5);
