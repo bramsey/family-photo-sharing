@@ -5,16 +5,7 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.all
-    
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
-    end
-  end
-  
-  def today
-    @pictures = Picture.todays_pictures
+    @pictures = Picture.all(:include => [{:comments => {:user => :avatar}}, {:user => :avatar}])
     
     respond_to do |format|
       format.html # index.html.erb
@@ -34,7 +25,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
-    @picture = Picture.find(params[:id])
+    @picture = Picture.find(params[:id], :include => [{:comments => {:user => :avatar}}, {:user => :avatar}])
 
     respond_to do |format|
       format.html # show.html.erb

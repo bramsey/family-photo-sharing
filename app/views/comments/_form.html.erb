@@ -1,7 +1,6 @@
 <div class="action">
 	<% if user_signed_in? %>
-	
-		<%= image_tag current_user.avatar_thumb_path, :class => 'ava_mini' %>
+		<%= link_to image_tag(current_user.avatar_thumb_path, :class => 'ava_mini'), current_user %>
 		<p>
 			<%= form_for current_user.comments.build(:picture_id => picture.id, :user_id => current_user.id), :remote => true do |f| %>
 				<div class="clearfix"> 

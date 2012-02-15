@@ -1,3 +1,7 @@
+<%= content_for :head do %>
+
+<%= render :partial => 'layouts/upload_js_headers' %>
+<% end %>
 <span id="redirect_path" style="display: none"><%="#{edit_user_registration_path}"%></span>
 <div id="avatar_form">
 	<% if current_user.avatar %>
