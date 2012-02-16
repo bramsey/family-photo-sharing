@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :pictures, :dependent => :destroy
   has_many :comments, :dependent => :destroy
   has_one :avatar, :dependent => :destroy
+  
+  default_scope :order => 'users.created_at DESC'
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
