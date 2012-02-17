@@ -84,4 +84,19 @@ $big-picture-size: 804px;
 	min-height: 100px;
 }
 
+.main { position: relative; }
+
+
+.delete {
+	position: absolute;
+	z-index: 5;
+	right: 8px;
+	top: 8px;
+	//display: none;
+}
+
+.big .delete {
+	right: 24px;
+	top: 24px;
+}
 
