@@ -63,6 +63,7 @@ $big-picture-size: 804px;
 	min-height: 30px;
 	display: inline-block;
 	width: $picture-size;
+	position: relative;
 }
 
 .big .comment, .big .action {
