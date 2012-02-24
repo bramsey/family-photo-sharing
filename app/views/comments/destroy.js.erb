@@ -1,0 +1,22 @@
+<% unless @comment.errors.any? %>
+	var comment = $("#comment<%= @comment.id %>")
+	
+	$(comment).fadeOut(300)
+	setTimeout(function() {
+		$(comment).remove();
+		$('#pictures').masonry( 'reload' );
+	}, 300);
+	
+	
+	updateFlash();
+<% end %>
+
+function updateFlash() {
+	$('#flash')
+		.html("<%= escape_javascript(render(:partial => "layouts/flashes")) %>")
+		.hide()
+		.fadeIn('medium')
+	setTimeout(function() {
+		$('#flash').fadeOut('medium');
+	}, 2000);
+}
